@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List App</title>
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="todo-wrapper" id="todo-wrapper">
+    <h1>Add you Todos !</h1>
+    <div class="form-wrappers">
+      <!-- Add todo form -->
+      <form class="todo-form" id="add-todo-form" onsubmit="handleOnSubmit(event)">
+        <input type="text" id="add-todo-form-input" class="todo-input" placeholder='What is the task today?' />
+        <button type="submit" class='todo-btn'>Add</button>
+      </form>
+      <!-- update todo form -->
+      <form class="todo-form" id="update-todo-form" style="display: none;" onsubmit="handleOnUpdateSubmit(event)">
+        <input type="text" id="update-todo-form-input" class="todo-input" placeholder='What is the task today?' />
+        <button type="submit" class='todo-btn'>Update</button>
+      </form>
+    </div>
+    <!-- list items wrapper -->
+    <div id="list-items">
+
+    </div>
+  </div>
+  <script src="./scripts/index.js"></script>
+</body>
+
+</html>
